@@ -1,0 +1,43 @@
+/* Cuộn trang mượt mà */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================
+   HIỆU ỨNG SCROLL REVEAL (MỜ -> HIỆN)
+   ========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   TÙY CHỈNH THANH CUỘN (SCROLLBAR) TONE TỐI
+   ========================================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #09090b; /* Màu kẽm đậm (zinc-950) */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #27272a; /* Màu xám than (zinc-800) */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46; /* Màu xám nhạt hơn khi hover */
+}
